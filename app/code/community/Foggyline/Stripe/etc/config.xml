@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Foggyline_Stripe>
+            <version>1.0.0.0</version>
+        </Foggyline_Stripe>
+    </modules>
+    <global>
+        <models>
+            <foggyline_stripe>
+                <class>Foggyline_Stripe_Model</class>
+            </foggyline_stripe>
+        </models>
+        <helpers>
+            <foggyline_stripe>
+                <class>Foggyline_Stripe_Helper</class>
+            </foggyline_stripe>
+        </helpers>
+    </global>
+    <default>
+        <payment>
+            <foggyline_stripe>
+                <model>foggyline_stripe/payment</model>
+                <api_key backend_model="adminhtml/system_config_backend_encrypted" />
+                <payment_action>authorize_capture</payment_action>
+                <title>Foggyline Stripe</title>
+                <cctypes>AE,VI,MC,DI,JCB</cctypes>
+                <useccv>1</useccv>
+            </foggyline_stripe>
+        </payment>
+    </default>    
+</config>
